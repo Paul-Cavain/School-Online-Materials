@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Tabs from "components/tabs";
 
 export default function Home(){
     return (
@@ -77,131 +77,15 @@ export default function Home(){
               
 
                 {/* our courses */}
+            
                 <div className="md:mt-24 mt-14 font-extralight">
                     <div className="text-center">
                         <h3 className="text-3xl">Our courses</h3>
                     </div>
-                    
-                    <div className="mt-8">
-                        <div className="">
-                            <ol className="flex flex-col md:flex-row md:justify-start md:gap-y-0 gap-y-1 md:mx-20 bg-gray-200 h-10 font-semibold">
-                                <li>
-                                    <button className="w-32 h-10 bg-white">All Courses</button>
-                                </li>
-                                <li>
-                                    <button className="w-32 h-10">Physics</button>
-                                </li>
-                                <li>
-                                    <button className="w-32 h-10">Mathematics</button>
-                                </li>
-                                <li>
-                                    <button className="w-32 h-10">Biology</button>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-12 md:mt-14 mt-16 md:px-0 px-10">
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3>PHYSICS</h3>
-                                </div>
-                                <div className=" px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3>PHYSICS</h3>
-                                </div>
-                                <div className=" px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3 className="uppercase">Mathematics</h3>
-                                </div>
-                                <div className="px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3 className="uppercase">Mathematics</h3>
-                                </div>
-                                <div className="px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-12 md:mt-14 mt-16 md:px-0 px-10">
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3 className="uppercase">Mathematics</h3>
-                                </div>
-                                <div className="px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3>PHYSICS</h3>
-                                </div>
-                                <div className=" px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3 className="uppercase">Mathematics</h3>
-                                </div>
-                                <div className="px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-
-                            <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                                <div className="px-2">
-                                    <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                                </div>
-                                <div className="mt-4 px-2">
-                                    <h3 className="uppercase">Mathematics</h3>
-                                </div>
-                                <div className="px-2">
-                                    <h3>PHYSICS FOR ALL</h3>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="mt-10 mx-20">
+                        <Tabs />
                     </div>
+                    
                 </div>
 
                 {/* special program */}

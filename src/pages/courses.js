@@ -1,4 +1,5 @@
 import Navbar from "components/Navbar";
+import Tabs from "components/tabs";
 import Head from "next/head";
 import Image from "next/image";
 import { Person, CurrencyExchange, Messenger, TelephoneFill, PersonBadgeFill, } from "react-bootstrap-icons";
@@ -18,21 +19,8 @@ const talk = () => {
 
 
                 {/* dynamic tab */}
-                <div className="mt-10">
-                    <ol className="flex flex-col-2 md:flex-row justify-start md:mx-20 bg-gray-200 font-semibold h-10">
-                        <li>
-                            <button className="w-32 h-10 bg-white">All Courses</button>
-                        </li>
-                        <li>
-                            <button className="w-32 h-10">Physics</button>
-                        </li>
-                        <li>
-                            <button className="w-32 h-10">Mathematics</button>
-                        </li>
-                        <li>
-                            <button className="w-32 h-10">Biology</button>
-                        </li>
-                    </ol>
+                <div className="mt-10 mx-20">
+                    <Tabs />
                 </div>
 
                 {/* our courses */}
