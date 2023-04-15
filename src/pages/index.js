@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home(){
     return (
@@ -73,11 +74,14 @@ export default function Home(){
                     </div>
                 </div>
 
+              
+
                 {/* our courses */}
                 <div className="md:mt-24 mt-14 font-extralight">
                     <div className="text-center">
                         <h3 className="text-3xl">Our courses</h3>
                     </div>
+                    
                     <div className="mt-8">
                         <div className="">
                             <ol className="flex flex-col md:flex-row md:justify-start md:gap-y-0 gap-y-1 md:mx-20 bg-gray-200 h-10 font-semibold">
