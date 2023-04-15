@@ -89,7 +89,7 @@ export default function Home(){
                 </div>
 
                 {/* special program */}
-                <div className="md:mt-28 mt-14 pb-32 font-extralight">
+                {/* <div className="md:mt-28 mt-14 pb-32 font-extralight">
                     <div className="text-center">
                         <h3 className="text-3xl">Special Programs</h3>
                     </div>
@@ -144,7 +144,7 @@ export default function Home(){
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );

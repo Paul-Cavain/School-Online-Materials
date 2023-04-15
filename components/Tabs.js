@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -26,7 +27,7 @@ const Tabs = () => {
                 href="#link1"
                 role="tablist"
               >
-                Profile
+                All Courses
               </a>
             </li>
 
@@ -46,7 +47,7 @@ const Tabs = () => {
                 href="#link2"
                 role="tablist"
               >
-                Settings
+                Physics
               </a>
             </li>
 
@@ -66,47 +67,171 @@ const Tabs = () => {
                 href="#link3"
                 role="tablist"
               >
-                Options
+                Chemistry
               </a>
             </li>
+
+            
           </ul>
           
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+          <div className="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-6 shadow-md rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
 
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p>
-                    cavain administrate empowered markets via
-                    plug-and-play networks. Dynamically procrastinate B2C users
-                    after installed base benefits.
-                    <br />
-                    <br /> Dramatically visualize customer directed convergence
-                    without revolutionary ROI.
-                  </p>
+                  <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexel.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3>PHYSICS</h3>
+                                  </div>
+                                  <div className=" px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels1.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels2.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
-                  </p>
+                <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3>PHYSICS</h3>
+                                  </div>
+                                  <div className=" px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels4.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels1.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels3.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
-                  </p>
+                <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3>PHYSICS</h3>
+                                  </div>
+                                  <div className=" px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+
+                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
+                                  <div className="px-2">
+                                      <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
+                                  </div>
+                                  <div className="mt-4 px-2">
+                                      <h3 className="uppercase">Mathematics</h3>
+                                  </div>
+                                  <div className="px-2">
+                                      <h3>PHYSICS FOR ALL</h3>
+                                  </div>
+                    </div>
+                  </div>
                 </div>
                 
               </div>
