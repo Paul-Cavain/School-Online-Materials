@@ -27,10 +27,10 @@ const login = ()=>{
                                 <h3 className="text-center text-xl pt-4 text-white">Login</h3>
                             </div>
                             <div className="mt-3 px-4">
-                                <input type={"text"} name="username" placeholder="Enter Username" className="rounded-md h-10 w-full focus:outline-none" />
+                                <input type={"text"} name="username" placeholder="Enter Username" className="rounded-md h-10 w-full focus:outline-none px-2" />
                             </div>
                             <div className="mt-5 px-4">
-                                <input type={"text"} name="password" placeholder="Enter Password" className="rounded-md h-10 w-full focus:outline-none"  />
+                                <input type={"text"} name="password" placeholder="Enter Password" className="rounded-md h-10 w-full focus:outline-none px-2"  />
                             </div>
                             
                             <div className="text-end px-4">
@@ -46,7 +46,7 @@ const login = ()=>{
 
                         {/* column one */}
                         <div className="flex flex-col">
-                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg ">
+                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                                 <div className="flex flex-row space-x-3">
                                     <div>
                                         <PersonBadgeFill className="text-4xl text-blue-500" />
@@ -59,7 +59,7 @@ const login = ()=>{
                                     <p>We Applicate our students' desire for knowledge and provide litime access to education data</p>
                                 </div>
                             </div>
-                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6">
+                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                                 <div className="flex flex-row space-x-3">
                                     <div>
                                         <CurrencyExchange className="text-4xl text-blue-500" />
@@ -76,7 +76,7 @@ const login = ()=>{
 
                         {/* column two */}
                         <div className="flex flex-col">
-                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg">
+                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                                 <div className="flex flex-row space-x-3">
                                     <div>
                                         <Messenger className="text-3xl text-blue-500" />
@@ -89,13 +89,13 @@ const login = ()=>{
                                     <p>We Applicate our students' desire for knowledge and provide litime access to education data</p>
                                 </div>
                             </div>
-                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6">
+                            <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                                 <div className="flex flex-row space-x-3">
                                     <div>
                                         <TelephoneFill className="text-4xl text-blue-500" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl">Call +1 800 559 6580</h3>
+                                        <h3 className="text-2xl">Call +255 755 291 20</h3>
                                     </div>
                                 </div>
                                 <div className="mt-4">

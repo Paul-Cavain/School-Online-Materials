@@ -123,10 +123,10 @@ const Packages = () => {
                             <h3 className="text-center text-xl pt-4 text-white">Login</h3>
                         </div>
                         <div className="mt-3 px-4">
-                            <input type={"text"} name="username" placeholder="Enter Username" className="rounded-md h-10 w-full focus:outline-none" />
+                            <input type={"text"} name="username" placeholder="Enter Username" className="rounded-md h-10 w-full focus:outline-none px-2" />
                         </div>
                         <div className="mt-5 px-4">
-                            <input type={"text"} name="password" placeholder="Enter Password" className="rounded-md h-10 w-full focus:outline-none"  />
+                            <input type={"text"} name="password" placeholder="Enter Password" className="rounded-md h-10 w-full focus:outline-none px-2"  />
                         </div>
                         <div className="text-end px-4">
                             <button type="submit" className="h-10 w-full bg-black text-white mt-6 rounded-md">Login</button>

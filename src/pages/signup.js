@@ -26,31 +26,45 @@ const signup = () => {
 
                             <div className="mt-3 px-4">
                                 <label className="text-white">First Name </label>
-                                <input type={"text"} name="fname" placeholder="Enter First Name" className="rounded-md h-10 w-full" />
+                                <input type={"text"} name="fname" placeholder="Enter First Name" className="rounded-md h-10 w-full focus:outline-none px-2" />
                             </div>
                             <div className="mt-3 px-4">
-                            <label className="text-white">Last Name </label>
-                                <input type={"text"} name="lname" placeholder="Enter Last Name" className="rounded-md h-10 w-full" />
+                                <label className="text-white">Last Name </label>
+                                <input type={"text"} name="lname" placeholder="Enter Last Name" className="rounded-md h-10 w-full focus:outline-none px-2" />
                             </div>
                             <div className="mt-3 px-4">
-                            <label className="text-white">Student Phone Number (Optional) </label>
-                                <input type={"text"} name="student_phone" placeholder="Enter Student Phone Number" className="rounded-md h-10 w-full" />
+                                <label for="gender" className="block text-white">Select gender</label>
+                                <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2">
+                                    <option disabled selected>Select Your gender</option>
+                                    <option value={"Male"}>Male</option>
+                                    <option value={"Female"}>Female</option>
+                                    <option value={"Other"}>Other</option>
+                                </select>
                             </div>
                             <div className="mt-3 px-4">
-                            <label className="text-white">Parent Phone Number </label>
-                                <input type={"text"} name="parent_phone" placeholder="Enter Parent Phone Number" className="rounded-md h-10 w-full" />
+                                <label className="text-white">Student Phone Number (Optional) </label>
+                                <input type={"text"} name="student_phone" placeholder="Enter Student Phone Number" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                            </div>
+                            <div className="mt-3 px-4">
+                                <label className="text-white">Parent Phone Number </label>
+                                <input type={"text"} name="parent_phone" placeholder="Enter Parent Phone Number" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                            </div>
+                            <div className="mt-3 px-4">
+                                <label for="gender" className="block text-white">Select Package</label>
+                                <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block            focus:outline-none w-full h-10 px-2">
+                                    <option disabled selected>Select Your Package Category</option>
+                                    <option value={"Pro"} >Professional</option>
+                                    <option value={"Premier"} >Premium</option>
+                                    <option value={"Diamond"} >Diamond</option>
+                                </select>
                             </div>
                             <div className="mt-5 px-4">
-                            <label className="text-white">Select Package </label>
-                                <input type={"text"} name="package" placeholder="Package Category" className="rounded-md h-10 w-full"  />
+                                <label className="text-white">Create Password </label>
+                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  />
                             </div>
                             <div className="mt-5 px-4">
-                            <label className="text-white">Create Password </label>
-                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full"  />
-                            </div>
-                            <div className="mt-5 px-4">
-                            <label className="text-white">Confirm Password </label>
-                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full"  />
+                                <label className="text-white">Confirm Password </label>
+                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  />
                             </div>
                             
                             
@@ -68,7 +82,7 @@ const signup = () => {
 
                         <div className="">
                             {/* column one */}
-                            <div className="md:w-full hover:animate-bounce">
+                            <div className="md:w-full">
                                 <Image className="rounded-sm opacity-1" src={"/pexel.jpg"} width={600} height={100} alt="landing image" />
                             </div>
 
@@ -86,11 +100,11 @@ const signup = () => {
                                     <div className="mt-4">
                                         <p>We offer efficient package to every economy level</p>
                                     </div>
+                                    <div>
                                     <Link href={"./Packages"}>
-                                        <div>
-                                            <h3 className="text-end hover:rounded-t-sm hover:text-blue-500">Check it</h3>
-                                        </div>
+                                        <h3 className="text-end text-lg hover:rounded-t-sm hover:text-blue-500">Check it</h3>
                                     </Link>
+                                    </div>
                                 </div>
                                 <div className="bg-white w-full px-5 py-8 h-auto rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md ">
                                     <div className="flex flex-row space-x-3">
@@ -104,11 +118,13 @@ const signup = () => {
                                     <div className="mt-4">
                                         <p>Become a professional from our efficient courses</p>
                                     </div>
+                                    
+                                    <div>
                                     <Link href={"./courses"}>
-                                        <div>
-                                            <h3 className="text-end hover:rounded-t-sm hover:text-blue-500">Check it</h3>
-                                        </div>
+                                        <h3 className="text-end text-lg hover:rounded-t-sm hover:text-blue-500">Check it</h3>
                                     </Link>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
