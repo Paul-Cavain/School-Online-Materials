@@ -1,18 +1,25 @@
 import Image from "next/image";
+import Head from "next/head";
 
 
 const Events = () => {
     return(
         <>
+
+            <Head>
+                <title>Zephanious | Events</title>
+                <meta name="keywords" content="LearnNextJs" />
+            </Head>
+
             <div className="pt-32 bg-gray-100 pb-32">
                 <div className="font-extralight text-center">
-                    <h3 className="text-2xl">Upcomming Events</h3>
+                    <h3 className="text-3xl">Upcomming Events</h3>
                 </div>
 
                 {/* eventOne */}
-                <section className="flex flex-col md:flex-row justify-center space-x-8 mx-20 mt-14">
+                <section className="flex flex-col md:flex-row justify-center md:space-x-8 mx-4 nd:mx-20 mt-14">
 
-                    <div className="w-3/4 h-auto">
+                    <div className="md:w-3/4 h-auto">
                         <Image src={"/pexels.jpg"} width={400} height={100} alt="upcomming event one" className="rounded-md" />
                     </div>
                     <div className="flex flex-col">
@@ -36,9 +43,9 @@ const Events = () => {
                 </section>
 
                 {/* eventOne */}
-                <section className="flex flex-col md:flex-row justify-center space-x-8 mx-20 mt-14">
+                <section className="flex flex-col md:flex-row justify-center md:space-x-8 mx-4 md:mx-20 mt-14">
 
-                    <div className="w-3/4 h-auto">
+                    <div className="md:w-3/4 h-auto">
                         <Image src={"/pexels1.jpg"} width={400} height={100} alt="upcomming event one" className="rounded-md" />
                     </div>
                     <div className="flex flex-col">
@@ -62,9 +69,9 @@ const Events = () => {
                 </section>
 
                 {/* eventOne */}
-                <section className="flex flex-col md:flex-row justify-center space-x-8 mx-20 mt-14">
+                <section className="flex flex-col md:flex-row justify-center md:space-x-8 mx-4 md:mx-20 mt-14">
 
-                    <div className="w-3/4 h-auto">
+                    <div className="md:w-3/4 h-auto">
                         <Image src={"/pexels4.jpg"} width={400} height={100} alt="upcomming event one" className="rounded-md" />
                     </div>
                     <div className="flex flex-col">
