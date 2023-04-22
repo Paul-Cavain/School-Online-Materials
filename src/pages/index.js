@@ -29,7 +29,7 @@ export default function Home(){
                             <p className="">Want To Get Professional Knowledge In Fast Developing IT Sphere? If You Are Just An Amature Who Is Willing To Get Professional Knowledge Check What We have Prepared for you</p>
                         </div>
 
-                        <div className="flex md:flex-row md:mt-10 mt-6 space-x-10 md:space-x-0 md:pb-0 pb-6 justify-center">
+                        <div className="flex md:flex-row md:mt-10 mt-6 space-x-10 md:space-x-12 md:pb-0 pb-6 justify-center md:justify-start">
                             <Link href={"./contact"}>
                             <div>
                                 <button className="bg-black w-24 h-10 text-white rounded-md">Contact us</button>
