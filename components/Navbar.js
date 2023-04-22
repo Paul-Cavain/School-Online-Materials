@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter} from 'react-icons/ai'
+import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
 import { useState } from "react";
 
 const Navbar = () =>{
@@ -12,15 +12,15 @@ const Navbar = () =>{
     return(
         <nav className="fixed top-0 left-0 right-0 w-full h-20 shadow-xl bg-white z-10">
             <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
-                <div className="flex flex-row">
+                <div className="flex flex-row md:space-x-12 space-x-0">
                     <div>
                         <Link href="/">
                             <h3 className="text-3xl">Zephanious</h3>
                         </Link>
                     </div>
-                    <div>
+                    <div className="">
                         <Link href="/Packages">
-                            <button className="ml-10 h-10 w-32 rounded-md  text-lg bg-blue-500 text-white font-semibold">Our Packages</button>
+                            <button className="h-10 w-32 rounded-md  text-lg bg-indigo-600 text-white font-semibold invisible md:visible">Our Packages</button>
                         </Link>
                     </div>
                 </div>
@@ -58,20 +58,25 @@ const Navbar = () =>{
             </div>
 
             {/* how it will loooks in a mobile  */}
+            
             <div className={
                 menuOpen
                 ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
                 : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
 
             }>  
-                <div className="flex w-full items-center justify-end">
-                    <div onClick={handleNav} className="cursor-pointer">
+                <div className="flex flex-row space-x-8 w-full justify-between">
+                    <div>
+                        <h3 className="text-2xl">Zephanious</h3>
+                    </div>
+                    <div onClick={handleNav} className="cursor-pointer bg-indigo-600 rounded-full text-white">
                         <AiOutlineClose size={30} />
                     </div>
                 </div>
+                <hr className="mt-4" />
 
                 {/* sidebar menu in a mobile */}
-                <div className="flex col py-4">
+                <div className="flex col py-2">
                     <ul>
                         <Link href="/">
                             <li
@@ -89,20 +94,20 @@ const Navbar = () =>{
                                 About
                             </li>
                         </Link>
-                        <Link href="/jobs">
+                        <Link href="/courses">
                             <li
                                 onClick={() => stMenuOpen(false)}
                                 className="py-4 cursor-pointer"
                             >
-                                Jobs
+                                Our Courses
                             </li>
                         </Link>
-                        <Link href="/employer">
+                        <Link href="/Events">
                             <li
                                 onClick={() => stMenuOpen(false)}
                                 className="py-4 cursor-pointer"
                             >
-                                Employer
+                                Events
                             </li>
                         </Link>
                         <Link href="/contact">
@@ -110,17 +115,38 @@ const Navbar = () =>{
                                 onClick={() => stMenuOpen(false)}
                                 className="py-4 cursor-pointer"
                             >
-                                Contact
+                                Contacts
                             </li>
                         </Link>
+                        <Link href="/login">
+                            <li
+                                onClick={() => stMenuOpen(false)}
+                                className="py-4 cursor-pointer"
+                            >
+                                Login
+                            </li>
+                        </Link>
+
+                        <Link href="/Packages">
+                            <li
+                                onClick={() => stMenuOpen(false)}
+                                className="h-10 py-2 px-4 mt-2 cursor-pointer bg-indigo-600  rounded-md text-white"
+                            >
+                                Our Packages
+                            </li>
+                        </Link>
+
                     </ul>
                 </div>
+                <hr className="mt-3" />
 
                 {/* social media icons */}
-                <div className="flex flex-row justify-around pt-10 item-center">
-                    <AiOutlineInstagram size={30} className="cursor-pointer" />
-                    <AiOutlineFacebook size={30} className="cursor-pointer" />
-                    <AiOutlineTwitter size={30} className="cursor-pointer" />
+                <div className="flex flex-row justify-start pt-10 item-center text-indigo-600 space-x-2">
+                    <AiOutlineInstagram className="cursor-pointer text-xl hover:text-2xl hover:text-black" />
+                    <AiOutlineFacebook className="cursor-pointer text-xl hover:text-2xl hover:text-black" />
+                    <AiOutlineTwitter className="cursor-pointer text-xl hover:text-2xl hover:text-black" />
+                    <AiOutlineLinkedin className="cursor-pointer text-xl hover:text-2xl hover:text-black" />
+                    <AiOutlineWhatsApp className="cursor-pointer text-xl hover:text-2xl hover:text-black" />
                 </div>
             </div>
         </nav>

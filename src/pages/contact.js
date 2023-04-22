@@ -8,7 +8,7 @@ const contact = ()=>{
         <>
             <div>
                 <Head>
-                    <title>Satify - contact</title>
+                    <title>Zephanious | contact</title>
                     <meta name="keywords" content="LearnNextJs" />
                 </Head>
                 <section className="bg-gray-100 pt-32">
@@ -19,10 +19,10 @@ const contact = ()=>{
                         <p>Any question or remark? Just write us a message</p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row justify-between mx-20 mt-14 pb-32">
+                    <div className="flex flex-col md:flex-row justify-between mx-4 md:mx-20 mt-14 pb-32">
 
                         {/* contact contents */}
-                        <div className="bg-white px-14 py-8 rounded-l-md shadow-lg shadow-t-2xl">
+                        <div className="bg-white px-8 md:px-14 py-8 rounded-l-md shadow-lg shadow-t-2xl">
                             <div className="text-2xl">
                                 <h3>Contact Information</h3>
                             </div>
@@ -31,7 +31,7 @@ const contact = ()=>{
                             </div>
                             <div className="flex flex-row space-x-4 mt-12">
                                 <div>
-                                    <TelephoneFill className="text-2xl text-blue-500" />
+                                    <TelephoneFill className="text-2xl text-indigo-600" />
                                 </div>
                                 <div className="text-black">
                                     <h3>+255755291920</h3>
@@ -39,7 +39,7 @@ const contact = ()=>{
                             </div>
                             <div className="flex flex-row space-x-4 mt-4">
                                 <div>
-                                    <AiOutlineMail className="text-3xl text-blue-500" />
+                                    <AiOutlineMail className="text-3xl text-indigo-600" />
                                 </div>
                                 <div className="text-black">
                                     <h3>paulcavain02@gmail.com</h3>
@@ -47,7 +47,7 @@ const contact = ()=>{
                             </div>
                             <div className="flex flex-row space-x-4 mt-4">
                                 <div>
-                                    <AiOutlineCompass className="text-3xl text-blue-500" />
+                                    <AiOutlineCompass className="text-3xl text-indigo-600" />
                                 </div>
                                 <div className="text-black">
                                     <h3>Tabora Municipal- Tanzania</h3>
@@ -56,25 +56,25 @@ const contact = ()=>{
 
                             <div className="space-x-4 flex flex-row mt-28">
                                 <div>
-                                    <Twitter className="text-blue-500 text-lg hover:text-xl hover:text-black cursor-pointer" />
+                                    <Twitter className="text-indigo-600 text-lg hover:text-xl hover:text-black cursor-pointer" />
                                 </div>
                                 <div>
-                                    <Linkedin className="text-blue-500 text-lg hover:text-xl hover:text-black cursor-pointer" />
+                                    <Linkedin className="text-indigo-600 text-lg hover:text-xl hover:text-black cursor-pointer" />
                                 </div>
                                 <div>
-                                    <Instagram className="text-blue-500 text-lg hover:text-xl hover:text-black cursor-pointer" />
+                                    <Instagram className="text-indigo-600 text-lg hover:text-xl hover:text-black cursor-pointer" />
                                 </div>
                                 <div>
-                                    <Facebook className="text-blue-500 text-lg hover:text-xl hover:text-black cursor-pointer" />
+                                    <Facebook className="text-indigo-600 text-lg hover:text-xl hover:text-black cursor-pointer" />
                                 </div>
                             </div>
                         </div>
 
                         {/* contact form */}
-                        <div className="bg-blue-500 w-3/4 px-12 py-8 rounded-r-md">
+                        <div className="bg-indigo-600 md:w-3/4 px-8 md:px-12 py-8 rounded-r-md">
 
                             <div className="flex flex-col">
-                                <div className="flex flex-col md:flex-row space-x-4">
+                                <div className="flex flex-col md:flex-row md:space-x-4">
                                     <div className="w-full">
                                         <label className="text-white">First Name</label>
                                         <input type={"text"} name="fname" placeholder="Your First Name" className="w-full h-10 focus:outline-none px-2 rounded-md" />
@@ -84,7 +84,7 @@ const contact = ()=>{
                                         <input type={"text"} name="lname" placeholder="Your Last Name" className="w-full h-10 focus:outline-none px-2 rounded-md" />
                                     </div>
                                 </div>
-                                <div className="flex flex-col md:flex-row space-x-4 mt-4">
+                                <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
                                     <div className="w-full">
                                         <label className="text-white">E-Mail</label>
                                         <input type={"text"} name="mail" placeholder="Enter Your mail" className="w-full h-10 focus:outline-none px-2 rounded-md" />
@@ -99,7 +99,7 @@ const contact = ()=>{
                             <div className="mt-6 text-white">
                                 <h3>What does your question based?</h3>
                             </div>
-                            <div className="flex flex-row space-x-8 mt-2 text-gray-700">
+                            <div className="flex flex-row md:space-x-8 mt-2 text-gray-700">
                                 <div>
                                     <input type={"radio"} name="Physics" /><span className="ml-1">Physics</span>
                                 </div>

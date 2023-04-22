@@ -11,19 +11,19 @@ const about = ()=>{
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
 
-            <div className="md:pt-44 bg-gray-100">
-                <div className="md:ml-20 text-3xl font-extralight">
+            <div className="md:pt-44 pt-32 bg-gray-100">
+                <div className="md:px-20 px-4 text-3xl font-extralight">
                     <h1>Who We Are</h1>
                 </div>
 
                 {/* who we are */}
-                <div className="mt-10 flex flex-col md:flex-row md:px-20 space-x-10 font-extralight">
+                <div className="md:mt-10 mt-6 flex flex-col md:flex-row md:px-20 px-4 md:space-x-10 font-extralight">
                     {/* column one */}
                     <div className="flex flex-col">
-                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg ">
+                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div className="flex flex-row space-x-3">
                                 <div>
-                                    <PersonBadgeFill className="text-4xl text-blue-500" />
+                                    <PersonBadgeFill className="text-4xl  text-indigo-600" />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl">24 Hours Srvices</h3>
@@ -33,10 +33,10 @@ const about = ()=>{
                                 <p>We Applicate our students' desire for knowledge and provide litime access to education data</p>
                             </div>
                         </div>
-                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6">
+                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div className="flex flex-row space-x-3">
                                 <div>
-                                    <CurrencyExchange className="text-4xl text-blue-500" />
+                                    <CurrencyExchange className="text-4xl text-indigo-600" />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl">Online Payment</h3>
@@ -49,11 +49,11 @@ const about = ()=>{
                     </div>
 
                     {/* column two */}
-                    <div className="flex flex-col">
-                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg">
+                    <div className="flex flex-col md:mt-0 mt-6">
+                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div className="flex flex-row space-x-3">
                                 <div>
-                                    <Messenger className="text-3xl text-blue-500" />
+                                    <Messenger className="text-3xl text-indigo-600" />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl">Online Help</h3>
@@ -63,10 +63,10 @@ const about = ()=>{
                                 <p>We Applicate our students' desire for knowledge and provide litime access to education data</p>
                             </div>
                         </div>
-                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6">
+                        <div className="bg-white w-full px-5 py-8 rounded-md shadow-lg mt-6 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div className="flex flex-row space-x-3">
                                 <div>
-                                    <TelephoneFill className="text-4xl text-blue-500" />
+                                    <TelephoneFill className="text-4xl text-indigo-600 " />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl">Call +1 800 559 6580</h3>
@@ -79,18 +79,18 @@ const about = ()=>{
                     </div>
 
                     {/* about form */}
-                    <div className="bg-blue-500 w-1/2 pb-3 rounded-md">
+                    <div className="bg-indigo-600 md:w-1/2 mt-10 md:mt-0 pb-3 rounded-md">
                         <div>
                             <h3 className="text-center text-xl pt-4 text-white">Request an Estimate</h3>
                         </div>
                         <div className="mt-3 px-4">
-                            <input type={"text"} name="username" placeholder="Your Name" className="rounded-md h-10 w-full" />
+                            <input type={"text"} name="username" placeholder="Your Name" className="rounded-md h-10 w-full px-2 focus:outline-none" />
                         </div>
                         <div className="mt-5 px-4">
-                            <input type={"text"} name="email" placeholder="Your Email" className="rounded-md h-10 w-full"  />
+                            <input type={"text"} name="email" placeholder="Your Email" className="rounded-md h-10 w-full px-2 focus:outline-none"  />
                         </div>
                         <div className="mt-5 px-4">
-                            <textarea type={"text"} name="username" placeholder="Message" className="rounded-md h-20 w-full"  />
+                            <textarea type={"text"} name="username" placeholder="Message" className="rounded-md h-20 w-full px-2 focus:outline-none"  />
                         </div>
                         <div className="text-end px-4">
                             <button type="submit" className="h-10 w-20 bg-black text-white mt-3 ml-4 rounded-md">Send</button>
@@ -100,11 +100,11 @@ const about = ()=>{
                 </div>
 
                 {/* percentages  */}
-                <div className="flex flex-col md:flex-row mt-32 justify-center space-x-32 bg-white py-8 font-extralight">
+                <div className="flex flex-col md:flex-row mt-32 justify-center md:space-x-32 space-y-8 md:space-y-0 bg-white py-8 font-extralight mx-4 md:mx-0 text-center rounded-md md:rounded-none transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                     {/* percent one */}
                     <div className="flex flex-col ">
                         <div>
-                            <h3 className="text-6xl text-blue-500">100%</h3>
+                            <h3 className="text-6xl text-indigo-600">100%</h3>
                         </div>
                         <div className="mt-2">
                             <h3 className="text-xl px-2">SUCCESS RATE</h3>
@@ -114,7 +114,7 @@ const about = ()=>{
                     {/* percent two */}
                     <div className="flex flex-col">
                         <div>
-                            <h3 className="text-6xl text-blue-500 px-10">12+</h3>
+                            <h3 className="text-6xl text-indigo-600 px-10">12+</h3>
                         </div>
                         <div className="mt-2">
                             <h3 className="text-xl">YEARS OF SERVICES</h3>
@@ -124,7 +124,7 @@ const about = ()=>{
                     {/* percent three */}
                     <div className="flex flex-col">
                         <div>
-                            <h3 className="text-6xl text-blue-500">135+</h3>
+                            <h3 className="text-6xl text-indigo-600">135+</h3>
                         </div>
                         <div className="mt-2">
                             <h3 className="text-xl px-6">STUDENTS</h3>
@@ -134,7 +134,7 @@ const about = ()=>{
                     {/* percent four */}
                     <div className="flex flex-col">
                         <div>
-                            <h3 className="text-6xl text-blue-500 px-1">500+</h3>
+                            <h3 className="text-6xl text-indigo-600 px-1">500+</h3>
                         </div>
                         <div className="mt-2">
                             <h3 className="text-xl text-center">OUR COURSES</h3>
@@ -147,14 +147,14 @@ const about = ()=>{
                     <div>
                         <h3 className="text-center text-3xl font-extralight">A Few Words About Us</h3>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-6 px-4 md:px-0">
                         <p className="text-center">Every Member of Zephanious team believe strongly in the empowering of knowledge</p>
                     </div>
 
                     {/* first card */}
-                    <div className="flex flex-col md:flex-row md:mx-20 space-x-4 mt-14">
-                        <div className="bg-white rounded-md py-6 shadow-md border-2 border-blue-500">
-                            <div className="px-32">
+                    <div className="flex flex-col md:flex-row md:mx-20 md:space-x-4 mt-14 px-4 md:px-0 space-y-4 md:space-y-0">
+                        <div className="bg-white rounded-md py-6 shadow-md border-2 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md border-gray-200">
+                            <div className="px-40 md:px-32">
                                 <People className="text-2xl text-blue-500" />
                             </div>
                             <div className="text-center mt-2">
@@ -165,8 +165,8 @@ const about = ()=>{
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-md py-6 shadow-md border-2 border-blue-500">
-                            <div className="px-32">
+                        <div className="bg-white rounded-md py-6 shadow-md border-2 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md border-gray-200">
+                            <div className="px-40 md:px-32">
                                 <Alarm className="text-2xl text-blue-500" />
                             </div>
                             <div className="text-center mt-2">
@@ -177,8 +177,8 @@ const about = ()=>{
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-md py-6 shadow-md border-2 border-blue-500">
-                            <div className="px-32">
+                        <div className="bg-white rounded-md py-6 shadow-md border-2 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md border-gray-200">
+                            <div className="px-40 md:px-32">
                                 <CalendarEvent className="text-2xl text-blue-500" />
                             </div>
                             <div className="text-center mt-2">
@@ -189,8 +189,8 @@ const about = ()=>{
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-md py-6 shadow-md border-2 border-blue-500">
-                            <div className="px-32">
+                        <div className="bg-white rounded-md py-6 shadow-md border-2 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md border-gray-200">
+                            <div className="px-40 md:px-32">
                                 <Chat className="text-2xl text-blue-500" />
                             </div>
                             <div className="text-center mt-2">
@@ -204,9 +204,9 @@ const about = ()=>{
                 </div>
 
                 {/* We envision */}
-                <div className="mt-32 bg-white py-20 font-extralight">
-                    <div className="px-20">
-                        <h3 className="text-center text-2xl font-extralight">We Envision A World Where Anyone, Anywhere Can Transform Their Life By Accessing The World's Best Learning Experience</h3>
+                <div className="mt-20 md:mt-32 bg-white mx-4 md:mx-0 py-20 font-extralight">
+                    <div className="px-4 md:px-20">
+                        <h3 className="text-center text-lg md:text-2xl font-extralight">We Envision A World Where Anyone, Anywhere Can Transform Their Life By Accessing The World's Best Learning Experience</h3>
                     </div>
 
                     <Link href="/contact">
@@ -217,8 +217,8 @@ const about = ()=>{
                 </div>
 
                 {/* specializations */}
-                <div className="flex flex-col md:flex-row justify-center md:mx-20 space-x-12 mt-20 font-extralight">
-                    <div className="w-1/2 mt-3">
+                <div className="flex flex-col md:flex-row justify-center md:mx-20 md:space-x-12 mt-10 md:mt-20 font-extralight px-4 md:px-0">
+                    <div className="md:w-1/2 mt-3">
                         <div>
                             <h3 className="text-3xl font-extralight">Specializations</h3>
                         </div>
@@ -236,23 +236,22 @@ const about = ()=>{
                         </Link>
                     </div>
 
-                    <div className="w-1/2 md:px-10">
-                        <Image src={"/pexel.jpg"} width={500} height={100} alt="program specifications" />
+                    <div className="md:w-1/2 md:px-10 mt-8 md:mt-0 ">
+                        <Image src={"/pexel.jpg"} width={500} height={100} alt="program specifications" className="rounded-md md:rounded-none" />
                     </div>
 
                 </div>
 
                 {/* meet or teachers */}
-                <div className="mt-28 font-extralight">
+                <div className="mt-12 md:mt-28 font-extralight">
                     <div>
                         <h3 className="text-3xl text-center">Meet Our Teacher</h3>
                     </div>
 
                     {/* cards */}
-                    
-                    <div className="flex flex-col md:flex-row mx-20 space-x-4 mt-10">
-                        <div className="flex flex-col bg-white px-2 py-2 rounded-sm shadow-md">
-                            <div>
+                    <div className="flex flex-col md:flex-row mx-10 md:mx-20 md:space-x-4 mt-10 space-y-4 md:space-y-0">
+                        <div className="flex flex-col bg-white px-2 py-2 rounded-md md:rounded-sm shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                            <div className="">
                                 <Image src={"/pexels.jpg"} width={300} height={100} alt="head of technology" className="rounded-md" />
                             </div>
                             <div className="mt-3">
@@ -264,26 +263,26 @@ const about = ()=>{
                             <div className="mt-3">
                                 <p>His passion is technology and web development. He is always looking for new approaches in online education</p>
                             </div>
-                            <div className="flex flex-row text-lg mt-4 space-x-3">
+                            <div className="flex flex-row text-md mt-4 space-x-3">
                                 <div>
-                                    <Facebook className="text-blue-500"/>
+                                    <Facebook className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Twitter className="text-blue-500"/>
+                                    <Twitter className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Youtube className="text-blue-500"/>
+                                    <Youtube className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Linkedin className="text-blue-500"/>
+                                    <Linkedin className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Google className="text-blue-500"/>
+                                    <Google className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex flex-col bg-white px-2 py-2 rounded-sm shadow-md">
+                        <div className="flex flex-col bg-white px-2 py-2 rounded-md md:rounded-sm shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div>
                                 <Image src={"/pexels.jpg"} width={300} height={100} alt="head of technology" className="rounded-md" />
                             </div>
@@ -296,26 +295,26 @@ const about = ()=>{
                             <div className="mt-3">
                                 <p>His passion is technology and web development. He is always looking for new approaches in online education</p>
                             </div>
-                            <div className="flex flex-row text-lg mt-4 space-x-3">
+                            <div className="flex flex-row text-md mt-4 space-x-3">
                                 <div>
-                                    <Facebook className="text-blue-500"/>
+                                    <Facebook className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Twitter className="text-blue-500"/>
+                                    <Twitter className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Youtube className="text-blue-500"/>
+                                    <Youtube className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Linkedin className="text-blue-500"/>
+                                    <Linkedin className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Google className="text-blue-500"/>
+                                    <Google className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex flex-col bg-white px-2 py-2 rounded-sm shadow-md">
+                        <div className="flex flex-col bg-white px-2 py-2 rounded-md md:rounded-sm shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div>
                                 <Image src={"/pexels.jpg"} width={300} height={100} alt="head of technology" className="rounded-md" />
                             </div>
@@ -328,26 +327,26 @@ const about = ()=>{
                             <div className="mt-3">
                                 <p>His passion is technology and web development. He is always looking for new approaches in online education</p>
                             </div>
-                            <div className="flex flex-row text-lg mt-4 space-x-3">
+                            <div className="flex flex-row text-md mt-4 space-x-3">
                                 <div>
-                                    <Facebook className="text-blue-500"/>
+                                    <Facebook className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Twitter className="text-blue-500"/>
+                                    <Twitter className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Youtube className="text-blue-500"/>
+                                    <Youtube className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Linkedin className="text-blue-500"/>
+                                    <Linkedin className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Google className="text-blue-500"/>
+                                    <Google className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex flex-col bg-white px-2 py-2 rounded-sm shadow-md">
+                        <div className="flex flex-col bg-white px-2 py-2 rounded-md md:rounded-sm shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                             <div>
                                 <Image src={"/pexels.jpg"} width={300} height={100} alt="head of technology" className="rounded-md" />
                             </div>
@@ -360,21 +359,21 @@ const about = ()=>{
                             <div className="mt-3">
                                 <p>His passion is technology and web development. He is always looking for new approaches in online education</p>
                             </div>
-                            <div className="flex flex-row text-lg mt-4 space-x-3">
+                            <div className="flex flex-row text-md mt-4 space-x-3">
                                 <div>
-                                    <Facebook className="text-blue-500"/>
+                                    <Facebook className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Twitter className="text-blue-500"/>
+                                    <Twitter className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Youtube className="text-blue-500"/>
+                                    <Youtube className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Linkedin className="text-blue-500"/>
+                                    <Linkedin className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                                 <div>
-                                    <Google className="text-blue-500"/>
+                                    <Google className="text-indigo-600 hover:text-xl hover:text-black cursor-pointer"/>
                                 </div>
                             </div>
                         </div>
@@ -382,13 +381,14 @@ const about = ()=>{
                 </div>
 
                 {/* Testimonies */}
-                <div className="mt-32 pb-32 font-extralight">
+                <div className="mt-20 md:mt-32 pb-32 font-extralight">
                     <div>
                         <h3 className="text-3xl text-center">Testimonials</h3>
                     </div>
-                    <div className="flex flex-col md:flex-row space-x-20 md:mx-20 mt-10">
-                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16">
-                            <div className="relative overflow-hidden rounded-full ring-4 w-52 mt-6">
+                    
+                    <div className="flex flex-col md:flex-row md:space-x-20 space-y-4 md:space-y-0 mx-4 md:mx-20 mt-10 ">
+                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                            <div className="relative overflow-hidden rounded-full ring-4 md:w-52 mt-6">
                                 <Image objectFit="cover" src={"/pexel.jpg"} layout="fill" priority alt="first testmony" className="" />
                             </div>
 
@@ -405,8 +405,8 @@ const about = ()=>{
                             </div>
                         </div>
 
-                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16">
-                            <div className="relative overflow-hidden rounded-full ring-4 w-52 mt-6">
+                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                            <div className="relative overflow-hidden rounded-full ring-4 md:w-52 mt-6">
                                 <Image objectFit="cover" src={"/pexel.jpg"} layout="fill" priority alt="first testmony" className="" />
                             </div>
 
@@ -424,9 +424,9 @@ const about = ()=>{
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row space-x-20 md:mx-20 mt-10">
-                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16">
-                            <div className="relative overflow-hidden rounded-full ring-4 w-52 mt-6">
+                    <div className="flex flex-col md:flex-row md:space-x-20 md:mx-20 mt-10 space-y-4 md:space-y-0 mx-4">
+                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                            <div className="relative overflow-hidden rounded-full ring-4 md:w-52 mt-6">
                                 <Image objectFit="cover" src={"/pexel.jpg"} layout="fill" priority alt="first testmony" className="" />
                             </div>
 
@@ -443,8 +443,8 @@ const about = ()=>{
                             </div>
                         </div>
 
-                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16">
-                            <div className="relative overflow-hidden rounded-full ring-4 w-52 mt-6">
+                        <div className="flex flex-row space-x-5 px-4 py-8 bg-white rounded-md shadow-md md:pb-16 transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                            <div className="relative overflow-hidden rounded-full ring-4 md:w-52 mt-6">
                                 <Image objectFit="cover" src={"/pexel.jpg"} layout="fill" priority alt="first testmony" className="" />
                             </div>
 

@@ -13,18 +13,17 @@ const Packages = () => {
             </Head>
 
             <Fragment>
-                <div className="pt-32 bg-gray-100 pb-32">
-                    <div className="md:ml-20 text-3xl font-extralight">
+                <div className="pt-32 bg-gray-100 pb-32 px-4 md:px-0">
+                    <div className="md:ml-20 text-3xl text-center font-extralight">
                         <h3>Our Packages</h3>
                     </div>
-                    <div className="md:ml-20 text-xl font-extralight">
+                    <div className="md:ml-20 text-xl text-center font-extralight">
                         <h2>Select the package of your favourite choice</h2>
                     </div>
 
                     {/* cards */}
 
-                    
-                    <div className="flex flex-col md:flex-row justify-center space-x-10 md:mx-20 mt-12">
+                    <div className="flex flex-col md:flex-row justify-center md:space-x-10 md:mx-20 mt-12 space-y-10 md:space-y-0">
 
                         {/* cardOne */}
                         <div className="bg-white md:px-4 pt-5 pb-10 rounded-md w-full text-center shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
@@ -37,13 +36,13 @@ const Packages = () => {
                             <div className="mt-8 text-start px-10">
                                 <ol>
                                     <li>
-                                        <input type={"checkbox"} className="" checked="true" />Free Download
+                                        <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Online Reading
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Online Reading</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Questions and Answers
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Questions and Answers</span>
                                     </li>
                                 </ol>
                             </div>
@@ -63,13 +62,13 @@ const Packages = () => {
                             <div className="mt-8 text-start px-10">
                                 <ol>
                                     <li>
-                                        <input type={"checkbox"} className="" checked="true" />Free Download
+                                        <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Online Reading
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Online Reading</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Solved Questions and Answers
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Solved Questions and Answers</span>
                                     </li>
                                 
                                 </ol>
@@ -92,19 +91,19 @@ const Packages = () => {
                             <div className="mt-8 text-start px-10">
                                 <ol>
                                     <li>
-                                        <input type={"checkbox"} className="" checked="true" />Free Download
+                                        <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Online Reading
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Online Reading</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Solved Questions and Answers
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Solved Questions and Answers</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Challenged Questions
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Challenged Questions</span>
                                     </li>
                                     <li>
-                                        <input type={"checkbox"} className="mt-4" checked="true" />Free Monthly Tests
+                                        <input type={"checkbox"} className="mt-4" checked="true" /><span className="ml-2">Free Monthly Tests</span>
                                     </li>
                                 
                                 </ol>

@@ -7,19 +7,19 @@ const signup = () => {
     return(
         <>
             <Head>
-                <title>Satify | sign_up</title>
+                <title>Zephanious | sign_up</title>
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
-            <div className="md:pt-32 bg-gray-100">
+                <div className="pt-32 px-4 md:px-0 md:pt-32 bg-gray-100">
                     <div className="md:ml-20 text-3xl font-extralight">
                         <h1>Create An Account</h1>
                     </div>
 
                     {/* who we are */}
-                    <div className="mt-10 pb-40 flex flex-col md:flex-row md:px-20 space-x-10 font-extralight">
+                    <div className="mt-10 pb-40 flex flex-col md:flex-row md:px-20 md:space-x-10 font-extralight">
 
                         {/* about form */}
-                        <div className="bg-blue-500 w-1/2 pb-3 rounded-md">
+                        <div className="bg-indigo-600 md:w-1/2 pb-3 rounded-md">
                             <div className="mt-4">
                                 <h3 className="text-center text-xl pt-4 text-white">Fill Your Credentials</h3>
                             </div>
@@ -80,18 +80,18 @@ const signup = () => {
                             
                         </div>
 
-                        <div className="">
+                        <div className="mt-20 md:mt-0">
                             {/* column one */}
                             <div className="md:w-full">
-                                <Image className="rounded-sm opacity-1" src={"/pexel.jpg"} width={600} height={100} alt="landing image" />
+                                <Image className="rounded-md md:rounded-sm opacity-1" src={"/pexel.jpg"} width={600} height={100} alt="landing image" />
                             </div>
 
                             {/* column two */}
-                            <div className="flex flex-col mt-8 space-y-4">
+                            <div className="flex flex-col mt-8 space-y-8 md:space-y-4">
                                 <div className="bg-white w-full px-5 py-8 h-auto rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                                     <div className="flex flex-row space-x-3">
                                         <div>
-                                            <CollectionFill className="text-3xl text-blue-500" />
+                                            <CollectionFill className="text-3xl text-indigo-600" />
                                         </div>
                                         <div>
                                             <h3 className="text-2xl">Check On Our Packages</h3>
@@ -109,7 +109,7 @@ const signup = () => {
                                 <div className="bg-white w-full px-5 py-8 h-auto rounded-md shadow-lg transition duration-300 transform hover:shadow-blue-500 hover:shadow-md ">
                                     <div className="flex flex-row space-x-3">
                                         <div>
-                                            <BookFill className="text-4xl text-blue-500" />
+                                            <BookFill className="text-4xl text-indigo-600" />
                                         </div>
                                         <div>
                                             <h3 className="text-2xl">Check On Our Courses</h3>
