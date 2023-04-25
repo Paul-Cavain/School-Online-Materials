@@ -15,7 +15,7 @@ const login = ()=>{
 
                 <div className="pt-32 md:pt-44 bg-gray-100 px-4 md:px-0">
                     <div className="flex flex-col md:flex-row justify-between md:mx-20">
-                        <div className="text-3xl font-extralight">
+                        <div className="text-3xl font-light">
                             <h1>Sign In To Your Account</h1>
                         </div>
                         <div className="mt-4 md:mt-0">
@@ -26,7 +26,7 @@ const login = ()=>{
                     </div>
 
                     {/* who we are */}
-                    <div className="mt-10 pb-20 md:pb-40 flex flex-col md:flex-row md:px-20 md:space-x-10 font-extralight">
+                    <div className="mt-10 pb-20 md:pb-40 flex flex-col md:flex-row md:px-20 md:space-x-10 font-light">
 
                         {/* about form */}
                         <form action="" method="" className="bg-indigo-600 md:w-1/2 pb-3 rounded-md">
