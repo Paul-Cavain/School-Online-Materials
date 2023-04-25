@@ -14,7 +14,7 @@ const Packages = () => {
 
             <Fragment>
                 <div className="pt-32 bg-gray-100 pb-32 px-4 md:px-0">
-                    <div className="md:ml-20 text-3xl text-center font-extralight">
+                    <div className="md:ml-20 text-3xl text-center font-light">
                         <h3>Our Packages</h3>
                     </div>
                     <div className="md:ml-20 text-xl text-center font-extralight">
@@ -30,10 +30,10 @@ const Packages = () => {
                             <div className="text-xl uppercase">
                                 <h3>Professional</h3>
                             </div>
-                            <div className="mt-8 text-3xl font-extralight">
+                            <div className="mt-8 text-3xl font-light">
                                 <h3>3 Months | Tsh 3,000</h3>
                             </div>
-                            <div className="mt-8 text-start px-10">
+                            <div className="mt-8 text-start px-10 font-light">
                                 <ol>
                                     <li>
                                         <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>
@@ -56,10 +56,10 @@ const Packages = () => {
                             <div className="text-xl uppercase">
                                 <h3>Premium</h3>
                             </div>
-                            <div className="mt-8 text-3xl font-extralight">
+                            <div className="mt-8 text-3xl font-light">
                                 <h3>6 Months | Tsh 5,000</h3>
                             </div>
-                            <div className="mt-8 text-start px-10">
+                            <div className="mt-8 text-start px-10 font-light">
                                 <ol>
                                     <li>
                                         <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>
@@ -85,10 +85,10 @@ const Packages = () => {
                             <div className="text-xl uppercase">
                                 <h3>Diamond</h3>
                             </div>
-                            <div className="mt-8 text-3xl font-extralight">
+                            <div className="mt-8 text-3xl font-light">
                                 <h3>1 Year | Tsh 10,000</h3>
                             </div>
-                            <div className="mt-8 text-start px-10">
+                            <div className="mt-8 text-start px-10 font-light">
                                 <ol>
                                     <li>
                                         <input type={"checkbox"} className="" checked="true" /><span className="ml-2">Free Download</span>

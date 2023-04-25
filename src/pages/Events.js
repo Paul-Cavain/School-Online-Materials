@@ -12,7 +12,7 @@ const Events = () => {
             </Head>
 
             <div className="pt-32 bg-gray-100 pb-32">
-                <div className="font-extralight text-center">
+                <div className="font-light text-center">
                     <h3 className="text-3xl">Upcomming Events</h3>
                 </div>
 
@@ -33,7 +33,7 @@ const Events = () => {
                             <h3>Haneg Park Setagayaku, Setagaya 154-0017 Japan + Google Map</h3>
                         </div>
                         <hr className="mt-3" />
-                        <div className="mt-3">
+                        <div className="mt-3 font-light">
                             <p>Art can be a powerful catalyst for building skills and understanding a range of subjects. Intended for primary and secondary teachers of all disciplines, Art and Activity builds upon the inquiry-based approaches of Art and Inquiry.</p>
                         </div>
                         <div className="mt-8">
@@ -59,7 +59,7 @@ const Events = () => {
                             <h3>Haneg Park Setagayaku, Setagaya 154-0017 Japan + Google Map</h3>
                         </div>
                         <hr className="mt-3" />
-                        <div className="mt-3">
+                        <div className="mt-3 font-light">
                             <p>Art can be a powerful catalyst for building skills and understanding a range of subjects. Intended for primary and secondary teachers of all disciplines, Art and Activity builds upon the inquiry-based approaches of Art and Inquiry.</p>
                         </div>
                         <div className="mt-8">
@@ -85,7 +85,7 @@ const Events = () => {
                             <h3>Haneg Park Setagayaku, Setagaya 154-0017 Japan + Google Map</h3>
                         </div>
                         <hr className="mt-3" />
-                        <div className="mt-3">
+                        <div className="mt-3 font-light">
                             <p>Art can be a powerful catalyst for building skills and understanding a range of subjects. Intended for primary and secondary teachers of all disciplines, Art and Activity builds upon the inquiry-based approaches of Art and Inquiry.</p>
                         </div>
                         <div className="mt-8">

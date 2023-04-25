@@ -13,9 +13,9 @@ const contact = ()=>{
                 </Head>
                 <section className="bg-gray-100 pt-32">
                     <div className="text-center">
-                        <h3 className="text-2xl font-extralight">Contact Us</h3>
+                        <h3 className="text-2xl font-light">Contact Us</h3>
                     </div>
-                    <div className="text-center mt-2">
+                    <div className="text-center mt-2 font-light">
                         <p>Any question or remark? Just write us a message</p>
                     </div>
 
@@ -26,14 +26,14 @@ const contact = ()=>{
                             <div className="text-2xl">
                                 <h3>Contact Information</h3>
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 font-light">
                                 <p>Fill up the form and our Team will get back to you within 24 hours.</p>
                             </div>
                             <div className="flex flex-row space-x-4 mt-12">
                                 <div>
                                     <TelephoneFill className="text-2xl text-indigo-600" />
                                 </div>
-                                <div className="text-black">
+                                <div className="text-black font-light">
                                     <h3>+255755291920</h3>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@ const contact = ()=>{
                                 <div>
                                     <AiOutlineMail className="text-3xl text-indigo-600" />
                                 </div>
-                                <div className="text-black">
+                                <div className="text-black font-light">
                                     <h3>paulcavain02@gmail.com</h3>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ const contact = ()=>{
                                 <div>
                                     <AiOutlineCompass className="text-3xl text-indigo-600" />
                                 </div>
-                                <div className="text-black">
+                                <div className="text-black font-light">
                                     <h3>Tabora Municipal- Tanzania</h3>
                                 </div>
                             </div>

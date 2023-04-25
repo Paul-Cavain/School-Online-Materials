@@ -13,7 +13,7 @@ const talk = () => {
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
             <div className="pt-32  bg-gray-100">
-                <div className="text-center font-extralight">
+                <div className="text-center font-light">
                     <h3 className="text-3xl">Our Courses</h3>
                 </div>
 
@@ -49,14 +49,14 @@ const talk = () => {
                     </div>
 
                     <div className="mt-14 md:mt-10 pb-20 md:pb-0">
-                        <div className="font-extralight">
+                        <div className="font-light">
                             <h3 className="text-3xl">Get a Free Trial Session!</h3>
                         </div>
                     
-                        <div className="mt-4 md:mt-6">
+                        <div className="mt-4 md:mt-6 font-light">
                             <h3 className="uppercase">Register now to see if our online courses are right for you without any obligation on your part!</h3>
                         </div>
-                        <div className="flex flex-row space-x-4 md:space-x-10 mt-8 mx-4 md:mx-0">
+                        <div className="flex flex-row space-x-2 md:space-x-10 mt-8 mx-4 md:mx-0 justify-center">
                             <div className="flex flex-col border-2 border-indigo-600 w-20 md:w-24 rounded-md">
                                 <div className="px-3 md:px-5">
                                     <h3 className="text-5xl">00</h3>
