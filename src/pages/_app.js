@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import Navbar from 'components/Navbar';
-import Layout from 'components/Layout'
+import Layout from 'components/Layout';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <Component {...pageProps} />
     </Layout>
-    
+
   </>
   );
 }
+
+

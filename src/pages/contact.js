@@ -8,12 +8,12 @@ const contact = ()=>{
         <>
             <div>
                 <Head>
-                    <title>Zephanious | contact</title>
+                    <title>Zephanious | Contact</title>
                     <meta name="keywords" content="LearnNextJs" />
                 </Head>
                 <section className="bg-gray-100 pt-32">
                     <div className="text-center">
-                        <h3 className="text-2xl font-light">Contact Us</h3>
+                        <h3 className="text-3xl font-light">Contact Us</h3>
                     </div>
                     <div className="text-center mt-2 font-light">
                         <p>Any question or remark? Just write us a message</p>

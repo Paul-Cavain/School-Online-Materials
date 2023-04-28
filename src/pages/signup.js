@@ -1,14 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-import { BookFill, BookmarkDashFill, CollectionFill, Messenger, TelephoneFill,  } from "react-bootstrap-icons";
+import React, { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import Script from 'next/script'
+import { BookFill, BookmarkDashFill, CollectionFill, Messenger, Phone, TelephoneFill,  } from "react-bootstrap-icons";
 
 const signup = () => {
+    const [phoneNumber, setPhoneNumber] = useState('');
+  const [countryCode, setCountryCode] = useState('');
+
+  const handleOnChange = (value, country) => {
+    setPhoneNumber(value);
+    setCountryCode(country.dialCode);
+  }
     return(
         <>
             <Head>
                 <title>Zephanious | sign_up</title>
                 <meta name="keywords" content="LearnNextJs" />
+                <Script src="/validations/signinform.js"></Script>
             </Head>
                 <div className="pt-32 px-4 md:px-0 md:pt-32 bg-gray-100">
                     <div className="md:ml-20 text-3xl font-extralight">
@@ -32,23 +44,65 @@ const signup = () => {
                                 <label className="text-white">Last Name </label>
                                 <input type={"text"} name="lname" placeholder="Enter Last Name" className="rounded-md h-10 w-full focus:outline-none px-2" />
                             </div>
-                            <div className="mt-3 px-4">
-                                <label for="gender" className="block text-white">Select gender</label>
-                                <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2">
-                                    <option disabled selected>Select Your gender</option>
-                                    <option value={"Male"}>Male</option>
-                                    <option value={"Female"}>Female</option>
-                                    <option value={"Other"}>Other</option>
-                                </select>
+
+                            <div className="flex flex-col md:flex-row mt-3 justify-between md:space-x-6 px-4 w-full">
+                                <div className="w-full">
+                                    <label className="text-white">Your Age </label>
+                                    <input type={"number"} name="age" placeholder="Enter Your age" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                                </div>
+                                <div className="w-full">
+                                    <label for="gender" className="block text-white">Select gender</label>
+                                    <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2">
+                                        <option disabled selected>Select Your gender</option>
+                                        <option value={"Male"}>Male</option>
+                                        <option value={"Female"}>Female</option>
+                                        <option value={"Other"}>Other</option>
+                                    </select>
+                                </div>
+
                             </div>
-                            <div className="mt-3 px-4">
-                                <label className="text-white">Student Phone Number (Optional) </label>
-                                <input type={"text"} name="student_phone" placeholder="Enter Student Phone Number" className="rounded-md h-10 w-full focus:outline-none px-2" />
-                            </div>
+
                             <div className="mt-3 px-4">
                                 <label className="text-white">Parent Phone Number </label>
-                                <input type={"text"} name="parent_phone" placeholder="Enter Parent Phone Number" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                                <PhoneInput
+
+                                    country={'tz'}
+                                    value={phoneNumber}
+                                    onChange={handleOnChange}
+                                    inputProps={{
+                                    name: 'phone',
+                                    required: true,
+                                    style: { width: '100%', height: '40px' },
+                                    }}
+                                />
+                                <input
+                                    type="hidden"
+                                    name="countryCode"
+                                    value={countryCode}
+                                    
+                                />
                             </div>
+                            <div className='mt-3 px-4'>
+                                <label className="text-white">Student Phone Number(Optional) </label>
+                                <PhoneInput
+
+                                    country={'tz'}
+                                    value={phoneNumber}
+                                    onChange={handleOnChange}
+                                    inputProps={{
+                                    name: 'phone',
+                                    required: true,
+                                    style: { width: '100%', height: '40px' },
+                                    }}
+                                />
+                                <input
+                                    type="hidden"
+                                    name="countryCode"
+                                    value={countryCode}
+                                    
+                                />
+                            </div>
+                            
                             <div className="mt-3 px-4">
                                 <label for="gender" className="block text-white">Select Package</label>
                                 <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block            focus:outline-none w-full h-10 px-2">
@@ -131,8 +185,12 @@ const signup = () => {
                     </div>
 
                 </div>
+            
         </>
 
+    
+    
     );
+
 }
 export default signup;
