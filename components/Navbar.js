@@ -9,6 +9,7 @@ const Navbar = () =>{
     const handleNav = () =>{
         stMenuOpen(!menuOpen);
     }
+
     return(
         <nav className="fixed top-0 left-0 right-0 w-full h-20 shadow-xl bg-white z-10">
             <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
