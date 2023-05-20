@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import Script from 'next/script'
 import { BookFill, BookmarkDashFill, CollectionFill, Messenger, Phone, TelephoneFill,  } from "react-bootstrap-icons";
 
+
 const signup = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
-  const [countryCode, setCountryCode] = useState('');
+    const [countryCode, setCountryCode] = useState('');
 
-  const handleOnChange = (value, country) => {
+    const handleOnChange = (value, country) => {
     setPhoneNumber(value);
     setCountryCode(country.dialCode);
   }
@@ -22,7 +25,14 @@ const signup = () => {
                 <meta name="keywords" content="LearnNextJs" />
                 <Script src="/validations/signinform.js"></Script>
             </Head>
-                <div className="pt-32 px-4 md:px-0 md:pt-32 bg-gray-100">
+
+            {/* navigationBar */}
+            <div>
+                <Navbar />
+            </div>
+
+            {/* body contents */}
+            <div className="pt-32 px-4 md:px-0 md:pt-32 bg-gray-100">
                     <div className="md:ml-20 text-3xl font-extralight">
                         <h1>Create An Account</h1>
                     </div>
@@ -184,12 +194,15 @@ const signup = () => {
                         </div>
                     </div>
 
-                </div>
-            
+            </div>
+
+            {/* footer */}
+            <div>
+                <Footer />
+            </div>
+
         </>
 
-    
-    
     );
 
 }

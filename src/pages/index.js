@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Tabs from "components/tabs";
@@ -11,6 +13,12 @@ export default function Home(){
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
 
+            {/* navigation bar */}
+            <div>
+                <Navbar />
+            </div>
+
+            {/* body contents */}
             <div className="md:pt-44 pt-36 px-4 md:px-0 bg-gray-100">
 
                 {/* intro landing page */}
@@ -95,6 +103,11 @@ export default function Home(){
                 </div>
 
                 
+            </div>
+
+            {/* footer */}
+            <div>
+                <Footer />
             </div>
         </>
     );

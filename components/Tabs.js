@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -97,8 +98,11 @@ const Tabs = () => {
             <div className="flex-auto md:px-4 md:py-5">
               <div className="tab-content tab-space">
 
+                
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0">
+
+                    <Link href="./../src/pages/login.js">
                     <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                       <div className="px-2">
                           <Image src={"/pexel.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
@@ -110,6 +114,7 @@ const Tabs = () => {
                           <h3>PHYSICS FOR ALL</h3>
                       </div>
                     </div>
+                    </Link>
 
                     <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
                       <div className="px-2">

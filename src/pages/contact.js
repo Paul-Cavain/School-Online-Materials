@@ -1,3 +1,4 @@
+import Footer from "components/Footer";
 import Navbar from "components/Navbar";
 import Head from "next/head";
 import { Facebook, Instagram, Linkedin, TelephoneFill, Twitter } from "react-bootstrap-icons";
@@ -11,6 +12,13 @@ const contact = ()=>{
                     <title>Zephanious | Contact</title>
                     <meta name="keywords" content="LearnNextJs" />
                 </Head>
+
+                {/* navigationBar */}
+                <div>
+                    <Navbar />
+                </div>
+
+                {/* body contents */}
                 <section className="bg-gray-100 pt-32">
                     <div className="text-center">
                         <h3 className="text-3xl font-light">Contact Us</h3>
@@ -125,6 +133,11 @@ const contact = ()=>{
                         </div>
                     </div>
                 </section>
+
+                {/* footer */}
+                <div>
+                    <Footer />
+                </div>
             </div>
         </>
     );

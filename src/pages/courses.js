@@ -1,4 +1,5 @@
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 import Tabs from "components/tabs";
 import Head from "next/head";
 import Image from "next/image";
@@ -12,6 +13,13 @@ const talk = () => {
                 <title>Zephanious | Our Courses</title>
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
+
+            {/* //navigation bar */}
+            <div>
+                <Navbar />
+            </div>
+
+            {/* body contents */}
             <div className="pt-32  bg-gray-100">
                 <div className="text-center font-light">
                     <h3 className="text-3xl">Our Courses</h3>
@@ -99,6 +107,11 @@ const talk = () => {
 
                 </div>
 
+            </div>
+
+            {/* footer */}
+            <div>
+                <Footer />
             </div>
 
         </>

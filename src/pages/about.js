@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { Person, CurrencyExchange, Messenger, People, Alarm, CalendarEvent, Chat, TelephoneFill, PersonBadgeFill, Facebook, Twitter, Linkedin, Youtube, Google,  } from "react-bootstrap-icons";
@@ -11,6 +13,12 @@ const about = ()=>{
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
 
+            {/* navigation bar */}
+            <div>
+                <Navbar/>
+            </div>
+
+            {/* body contents */}
             <div className="md:pt-44 pt-32 bg-gray-100">
                 <div className="md:px-20 px-4 text-3xl font-light">
                     <h1>Who We Are</h1>
@@ -467,6 +475,11 @@ const about = ()=>{
 
 
 
+            </div>
+
+            {/* footer */}
+            <div>
+                <Footer/>
             </div>
         </div>
     );

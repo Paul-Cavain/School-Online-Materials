@@ -1,23 +1,30 @@
 import Image from "next/image";
 import Head from "next/head";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 
 const Events = () => {
     return(
         <>
-
             <Head>
                 <title>Zephanious | Events</title>
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
 
+            {/* navigation bar */}
+            <div>
+                <Navbar />
+            </div>
+
+            {/* body contents */}
             <div className="pt-32 bg-gray-100 pb-32">
                 <div className="font-light text-center">
                     <h3 className="text-3xl">Upcomming Events</h3>
                 </div>
 
                 {/* eventOne */}
-                <section className="flex flex-col md:flex-row justify-center md:space-x-8 mx-4 nd:mx-20 mt-14">
+                <section className="flex flex-col md:flex-row justify-center md:space-x-8 mx-4 md:mx-20 mt-14">
 
                     <div className="md:w-3/4 h-auto">
                         <Image src={"/pexels.jpg"} width={400} height={100} alt="upcomming event one" className="rounded-md" />
@@ -94,6 +101,11 @@ const Events = () => {
                     </div>
                 </section>
 
+            </div>
+
+            {/* footer */}
+            <div>
+                <Footer />
             </div>
         </>
     );

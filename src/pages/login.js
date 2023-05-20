@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from "next/link";
 import Head from "next/head";
 import { CurrencyExchange, Messenger, TelephoneFill, PersonBadgeFill,  } from "react-bootstrap-icons";
+import Footer from "components/Footer";
 
 const login = ()=>{
     return(
@@ -13,6 +14,12 @@ const login = ()=>{
                     <meta name="keywords" content="LearnNextJs" />
                 </Head>
 
+                {/* navigationBar */}
+                <div>
+                    <Navbar />
+                </div>
+
+                {/* body contents */}
                 <div className="pt-32 md:pt-44 bg-gray-100 px-4 md:px-0">
                     <div className="flex flex-col md:flex-row justify-between md:mx-20">
                         <div className="text-3xl font-light">
@@ -115,6 +122,11 @@ const login = ()=>{
 
                     </div>
 
+                </div>
+
+                {/* footer */}
+                <div>
+                    <Footer />
                 </div>
             </div>
         </>

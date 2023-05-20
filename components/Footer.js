@@ -1,6 +1,6 @@
 const Footer = () =>{
     return(
-        <div className=" text-center py-16 md:py-32 bg-gray-300">
+        <div className="flex flex-col text-center py-16 md:py-32 bg-gray-300">
             <div className="flex flex-col md:flex-row justify-evenly">
                 <div>
                     <h3 className="text-xl text-bold mb-2">Satify</h3>
@@ -10,7 +10,7 @@ const Footer = () =>{
                         <li>And HRs</li>
                     </ul>
                 </div>
-                <div className="mt-8">
+                <div className="mt-8 md:mt-0">
                     <h3 className="text-xl text-bold mb-2">Company</h3>
                     <ul className="list-style-none font-extralight">
                         <li>We automate</li>
@@ -18,7 +18,7 @@ const Footer = () =>{
                         <li>And HRs</li>
                     </ul>
                 </div>
-                <div className="mt-8">
+                <div className="mt-8 md:mt-0">
                     <h3 className="text-xl text-bold mb-2">Solutions</h3>
                     <ul className="list-style-none font-extralight">
                         <li>We automate</li>
@@ -26,7 +26,7 @@ const Footer = () =>{
                         <li>And HRs</li>
                     </ul>
                 </div>
-                <div className="mt-8">
+                <div className="mt-8 md:mt-0">
                     <h3 className="text-xl text-bold mb-2">Contacts</h3>
                     <ul className="list-style-none font-extralight">
                         <li>+2557464537</li>
@@ -35,6 +35,9 @@ const Footer = () =>{
                     </ul>
                 </div>
 
+            </div>
+            <div className="text-center text-gray-500 text-md mt-20">
+                <h3>PaulCavain</h3>
             </div>
 
         </div>

@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Modal from "components/Modal";
 import { Fragment, useState } from "react";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 const Packages = () => {
     const [showModal, setShowModal] = useState(false);
@@ -12,6 +14,12 @@ const Packages = () => {
                 <meta name="keywords" content="LearnNextJs" />
             </Head>
 
+            {/* navigationBar */}
+            <div>
+                <Navbar />
+            </div>
+
+            {/* body contents */}
             <Fragment>
                 <div className="pt-32 bg-gray-100 pb-32 px-4 md:px-0">
                     <div className="md:ml-20 text-3xl text-center font-light">
@@ -140,7 +148,10 @@ const Packages = () => {
                 </Modal>
             </Fragment>
 
-
+            {/* footer */}
+            <div>
+                <Footer />
+            </div>
         </>
     );
 }
