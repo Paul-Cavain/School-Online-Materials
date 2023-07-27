@@ -3,21 +3,29 @@ import Link from "next/link";
 import Head from "next/head";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import axios from "axios";
 import React, { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import Script from 'next/script'
-import { BookFill, BookmarkDashFill, CollectionFill, Messenger, Phone, TelephoneFill,  } from "react-bootstrap-icons";
+import { BookFill, CollectionFill,  } from "react-bootstrap-icons";
 
 
 const signup = () => {
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [countryCode, setCountryCode] = useState('');
+    const [inputs, setInputs] = useState({})
 
-    const handleOnChange = (value, country) => {
-    setPhoneNumber(value);
-    setCountryCode(country.dialCode);
-  }
+    const handleChange = (event) =>{
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs( values => ({...values, [name]: value}));
+    }
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+
+        axios.post('http://localhost:80/api/user/save', inputs).then(function(response){
+            console.log(response.data);
+        });
+       
+    }
     return(
         <>
             <Head>
@@ -40,29 +48,29 @@ const signup = () => {
                     {/* who we are */}
                     <div className="mt-10 pb-40 flex flex-col md:flex-row md:px-20 md:space-x-10 font-extralight">
 
-                        {/* about form */}
-                        <div className="bg-indigo-600 md:w-1/2 pb-3 rounded-md">
+                        {/* signup form */}
+                        <form onSubmit={handleSubmit} className="bg-indigo-600 md:w-1/2 pb-3 rounded-md">
                             <div className="mt-4">
                                 <h3 className="text-center text-xl pt-4 text-white">Fill Your Credentials</h3>
                             </div>
 
                             <div className="mt-3 px-4">
                                 <label className="text-white">First Name </label>
-                                <input type={"text"} name="fname" placeholder="Enter First Name" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                                <input type={"text"} name="fname" placeholder="Enter First Name" className="rounded-md h-10 w-full focus:outline-none px-2" onChange={handleChange}/>
                             </div>
                             <div className="mt-3 px-4">
                                 <label className="text-white">Last Name </label>
-                                <input type={"text"} name="lname" placeholder="Enter Last Name" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                                <input type={"text"} name="lname" placeholder="Enter Last Name" className="rounded-md h-10 w-full focus:outline-none px-2" onChange={handleChange}/>
                             </div>
 
                             <div className="flex flex-col md:flex-row mt-3 justify-between md:space-x-6 px-4 w-full">
                                 <div className="w-full">
                                     <label className="text-white">Your Age </label>
-                                    <input type={"number"} name="age" placeholder="Enter Your age" className="rounded-md h-10 w-full focus:outline-none px-2" />
+                                    <input type={"number"} name="age" placeholder="Enter Your age" className="rounded-md h-10 w-full focus:outline-none px-2" onChange={handleChange}/>
                                 </div>
                                 <div className="w-full">
                                     <label for="gender" className="block text-white">Select gender</label>
-                                    <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2">
+                                    <select name="gender" id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2" onChange={handleChange}>
                                         <option disabled selected>Select Your gender</option>
                                         <option value={"Male"}>Male</option>
                                         <option value={"Female"}>Female</option>
@@ -72,69 +80,49 @@ const signup = () => {
 
                             </div>
 
-                            <div className="mt-3 px-4">
-                                <label className="text-white">Parent Phone Number </label>
-                                <PhoneInput
-
-                                    country={'tz'}
-                                    value={phoneNumber}
-                                    onChange={handleOnChange}
-                                    inputProps={{
-                                    name: 'phone',
-                                    required: true,
-                                    style: { width: '100%', height: '40px' },
-                                    }}
-                                />
-                                <input
-                                    type="hidden"
-                                    name="countryCode"
-                                    value={countryCode}
-                                    
-                                />
+                            <div className="flex flex-col md:flex-row mt-3 justify-between md:space-x-6 px-4 w-full">
+                                <div className="w-full">
+                                    <label className="text-white">Parent Phone Number</label>
+                                    <input type={"text"} name="parent_phone" placeholder="Enter your parent phone number" className="rounded-md h-10 w-full focus:outline-none px-2" onChange={handleChange}/>
+                                </div>
+                                <div className="w-full">
+                                    <label className="text-white">Your Phone Number</label>
+                                    <input type={"text"} name="student_phone" placeholder="Enter phone number" className="rounded-md h-10 w-full focus:outline-none px-2" onChange={handleChange}/>
+                                </div>
                             </div>
-                            <div className='mt-3 px-4'>
-                                <label className="text-white">Student Phone Number(Optional) </label>
-                                <PhoneInput
 
-                                    country={'tz'}
-                                    value={phoneNumber}
-                                    onChange={handleOnChange}
-                                    inputProps={{
-                                    name: 'phone',
-                                    required: true,
-                                    style: { width: '100%', height: '40px' },
-                                    }}
-                                />
-                                <input
-                                    type="hidden"
-                                    name="countryCode"
-                                    value={countryCode}
-                                    
-                                />
+                            <div className="mt-3 px-4">
+                                <label for="package" className="block text-white">Select Level</label>
+                                <select id="package" name="Academic_Level" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2" onChange={handleChange}>
+                                    <option disabled selected>Select Your Academic level</option>
+                                    <option value={"O'Level"} >O'Level</option>
+                                    <option value={"A'Level"} >A'Level</option>
+                                </select>
                             </div>
                             
                             <div className="mt-3 px-4">
-                                <label for="gender" className="block text-white">Select Package</label>
-                                <select id="gender" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block            focus:outline-none w-full h-10 px-2">
+                                <label for="package" className="block text-white">Select Package</label>
+                                <select id="package" name="package" className="border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block focus:outline-none w-full h-10 px-2" onChange={handleChange}>
                                     <option disabled selected>Select Your Package Category</option>
-                                    <option value={"Pro"} >Professional</option>
+                                    <option value={"Professional"} >Professional</option>
                                     <option value={"Premier"} >Premium</option>
                                     <option value={"Diamond"} >Diamond</option>
                                 </select>
                             </div>
                             <div className="mt-5 px-4">
                                 <label className="text-white">Create Password </label>
-                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  />
+                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  onChange={handleChange}/>
                             </div>
                             <div className="mt-5 px-4">
                                 <label className="text-white">Confirm Password </label>
-                                <input type={"text"} name="password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  />
+                                <input type={"text"} name="confirm_password" placeholder="Package Category" className="rounded-md h-10 w-full focus:outline-none px-2"  onChange={handleChange}/>
                             </div>
                             
                             
                             <div className="text-end px-4">
                                 <button type="submit" className="h-10 w-full bg-black text-white mt-6 rounded-md">Register</button>
                             </div>
+                            
                             <div className="text-center mt-5">
                                 <input type={"checkbox"} name={"remember"} className="mx-1"/>Remember Me!
                             </div>
@@ -142,7 +130,7 @@ const signup = () => {
                                 <h3>Have an account? <Link href={"./login"}><span>Login</span></Link>  </h3>
                             </div>
                             
-                        </div>
+                        </form>
 
                         <div className="mt-20 md:mt-0">
                             {/* column one */}

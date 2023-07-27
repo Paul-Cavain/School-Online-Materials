@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
+import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin, AiOutlineWhatsApp} from 'react-icons/ai';
+import { Person  } from "react-bootstrap-icons";
 import { useState } from "react";
 
 const NavbarAdmin = () =>{
@@ -26,32 +27,20 @@ const NavbarAdmin = () =>{
                     </div>
                 </div>
                 <div className="hidden sm:flex px-10">
-                    <ul className="hidden sm:flex">
+                    <ul className="hidden sm:flex space-x-8">
                         
                         <Link href="/">
-                            <li className="ml-10 hover:border-b-4 text-lg">Home</li>
-                        </Link>
-                        <Link href="/about">
-                            <li className="ml-10 hover:border-b-4 text-lg">About</li>
-                        </Link>
-                        
-                        <Link href="/courses">
-                            <li className="ml-10 hover:border-b-4 text-lg">Our Courses</li>
-                        </Link>
-                        <Link href="/Events">
-                            <li className="ml-10 hover:border-b-4 text-lg">Events</li>
-                        </Link>
-
-                        <Link href="/contact">
-                            <li className="ml-10 hover:border-b-4 text-lg">Contacts</li>
+                            <li className="hover:border-b-4 text-lg">Home</li>
                         </Link>
 
                         <Link href="/login">
-                            <li className="ml-10 hover:border-b-4 text-lg">Login</li>
+                            <li className="hover:border-b-4 text-lg">Login</li>
                         </Link>
-                        
-                        
+                        <Link href="#">
+                            <Person className="text-3xl"/>
+                        </Link> 
                     </ul>
+
                 </div>
                 <div onClick={handleNav} className="sm:hidden cursor-pointer p-3">
                     <AiOutlineMenu size={25} />

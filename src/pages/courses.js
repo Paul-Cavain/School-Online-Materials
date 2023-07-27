@@ -1,12 +1,15 @@
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import Tabs from "components/tabs";
+import Tabs from "components/Tabs";
 import Head from "next/head";
 import Image from "next/image";
-import { Person, CurrencyExchange, Messenger, TelephoneFill, PersonBadgeFill, } from "react-bootstrap-icons";
+
+
 
 
 const talk = () => {
+
+
     return(
         <>
             <Head>

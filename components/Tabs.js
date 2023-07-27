@@ -1,9 +1,24 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
+import { useState, useEffect } from 'react';
 
 const Tabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
+
+  const [users, setUsers] = useState({});
+
+  useEffect(() => {
+      getUsers();
+  }, []);
+  
+  function getUsers() {
+      axios.get('http://localhost:80/api/user').then(function(response){
+        console.log(response.data);
+        setUsers(response.data);
+      });
+  }
   return (
     <>
       <div className="flex flex-col w-full">
@@ -94,218 +109,150 @@ const Tabs = () => {
 
           </ul>
           
-          <div className="relative flex flex-col bg-gray-100 w-full md:mb-4 mb-3 shadow-md rounded ">
+          <div className="relative flex flex-col bg-gray-100 w-full md:mb-4 mb-3 shadow-md rounded">
             <div className="flex-auto md:px-4 md:py-5">
               <div className="tab-content tab-space">
 
-                
+                {/* all courses */}
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0">
+                  <div className="justify-center mt-16">
 
-                    <Link href="./../src/pages/login.js">
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexel.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3>PHYSICS</h3>
-                      </div>
-                      <div className=" px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-                    </Link>
+                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                      {Array.isArray(users) ? (
+                        users.map((user, key) => (
+                          <ul key={key} className="">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels1.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels2.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
+                            <Link href={"{user.book_pdf}"}>
+                              <div className="bg-white h-auto w-full rounded-md py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                <div className="px-2">
+                                    {user.book_image}
+                                </div>
+                                <div className="mt-4 px-2">
+                                    <h3 className="uppercase">{user.course_name}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.course_level}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.form_level}</h3>
+                                </div>
+                              </div>
+                            </Link>
+                            </ul>
+                            ))
+                            ) : (
+                            <ul>
+                                <li colSpan="6" className="py-2 px-4 text-center">No such book found.</li>
+                            </ul>
+                        )}            
                     </div>
                   </div>
                 </div>
 
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3>PHYSICS</h3>
-                      </div>
-                      <div className=" px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                {/* physics cousses */}
+                <div className={openTab === 2 ? "block" : "hidden"} id="link1">
+                  <div className="justify-center mt-16">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels4.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                      {Array.isArray(users) ? (
+                        users.map((user, key) => (
+                          <ul key={key} className="">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels1.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels3.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
+                            <Link href={"{user.book_pdf}"}>
+                              <div className="bg-white h-auto w-full rounded-md py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                <div className="px-2">
+                                    {user.book_image}
+                                </div>
+                                <div className="mt-4 px-2">
+                                    <h3 className="uppercase">{user.course_name}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.course_level}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.form_level}</h3>
+                                </div>
+                              </div>
+                            </Link>
+                            </ul>
+                            ))
+                            ) : (
+                            <ul>
+                                <li colSpan="6" className="py-2 px-4 text-center">No such book found.</li>
+                            </ul>
+                        )}            
                     </div>
                   </div>
                 </div>
 
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3>PHYSICS</h3>
-                      </div>
-                      <div className=" px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                {/* Chemistry courses */}
+                <div className={openTab === 3 ? "block" : "hidden"} id="link1">
+                  <div className="justify-center mt-16">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                      {Array.isArray(users) ? (
+                        users.map((user, key) => (
+                          <ul key={key} className="">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
+                            <Link href={"{user.book_pdf}"}>
+                              <div className="bg-white h-auto w-full rounded-md py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                <div className="px-2">
+                                    {user.book_image}
+                                </div>
+                                <div className="mt-4 px-2">
+                                    <h3 className="uppercase">{user.course_name}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.course_level}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.form_level}</h3>
+                                </div>
+                              </div>
+                            </Link>
+                            </ul>
+                            ))
+                            ) : (
+                            <ul>
+                                <li colSpan="6" className="py-2 px-4 text-center">No such book found.</li>
+                            </ul>
+                        )}            
                     </div>
                   </div>
                 </div>
 
-                <div className={openTab === 4 ? "block" : "hidden"} id="link4">
-                  <div className="flex flex-col md:flex-row md:space-y-0 space-y-6 justify-center md:space-x-8 mt-16 md:px-0 px-10">
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3>PHYSICS</h3>
-                      </div>
-                      <div className=" px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                {/* Biology courses */}
+                <div className={openTab === 4 ? "block" : "hidden"} id="link1">
+                  <div className="justify-center mt-16">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels4.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
+                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                      {Array.isArray(users) ? (
+                        users.map((user, key) => (
+                          <ul key={key} className="">
 
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels1.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
-                    </div>
-
-                    <div className="bg-white h-auto w-64 py-2 pb-4 shadow-md">
-                      <div className="px-2">
-                          <Image src={"/pexels3.jpg"} width={250} height={100} alt="landing image" className="rounded-md" />
-                      </div>
-                      <div className="mt-4 px-2">
-                          <h3 className="uppercase">Mathematics</h3>
-                      </div>
-                      <div className="px-2">
-                          <h3>PHYSICS FOR ALL</h3>
-                      </div>
+                            <Link href={"{user.book_pdf}"}>
+                              <div className="bg-white h-auto w-full rounded-md py-2 pb-4 shadow-md transition duration-300 transform hover:shadow-blue-500 hover:shadow-md">
+                                <div className="px-2">
+                                    {user.book_image}
+                                </div>
+                                <div className="mt-4 px-2">
+                                    <h3 className="uppercase">{user.course_name}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.course_level}</h3>
+                                </div>
+                                <div className="px-2">
+                                    <h3>{user.form_level}</h3>
+                                </div>
+                              </div>
+                            </Link>
+                            </ul>
+                            ))
+                            ) : (
+                            <ul>
+                                <li colSpan="6" className="py-2 px-4 text-center">No such book found.</li>
+                            </ul>
+                        )}            
                     </div>
                   </div>
                 </div>
