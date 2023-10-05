@@ -15,7 +15,7 @@ const Footer = () =>{
                     <ul className="list-style-none font-extralight">
                         <li>We automate</li>
                         <li>For applicant</li>
-                        <li>And HRs</li>
+                        <li>And HR's</li>
                     </ul>
                 </div>
                 <div className="mt-8 md:mt-0">
@@ -23,13 +23,13 @@ const Footer = () =>{
                     <ul className="list-style-none font-extralight">
                         <li>We automate</li>
                         <li>For applicant</li>
-                        <li>And HRs</li>
+                        <li>And HR's</li>
                     </ul>
                 </div>
                 <div className="mt-8 md:mt-0">
                     <h3 className="text-xl text-bold mb-2">Contacts</h3>
                     <ul className="list-style-none font-extralight">
-                        <li>+2557464537</li>
+                        <li>+25574645373</li>
                         <li>P.O.Box 153 Dodoma</li>
                         <li>satify75@yahoo.com</li>
                     </ul>
