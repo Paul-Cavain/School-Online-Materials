@@ -2,13 +2,9 @@ import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import Tabs from "components/Tabs";
 import Head from "next/head";
-import Image from "next/image";
-
-
 
 
 const talk = () => {
-
 
     return(
         <>

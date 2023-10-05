@@ -112,6 +112,7 @@ const login = ()=>{
                                         <h3 className="text-2xl">Call +255 755 291 20</h3>
                                     </div>
                                 </div>
+                                
                                 <div className="mt-4">
                                     <p>We Applicate our students' desire for knowledge and provide litime access to education data</p>
                                 </div>

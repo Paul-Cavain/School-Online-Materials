@@ -1,15 +1,16 @@
 import { useState, useMemo } from "react";
-import { Postcard, Justify, Book, ClockHistory, PaintBucket, House, HouseCheck } from "react-bootstrap-icons";
+import { Postcard, Justify, Book, ClockHistory, PaintBucket, House, HouseCheck, Paypal, PatchCheck, PatchCheckFill } from "react-bootstrap-icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { AiOutlineLogout } from "react-icons/ai";
+import { AiFillMoneyCollect, AiOutlineLogout, AiOutlineMoneyCollect, AiTwotoneMoneyCollect } from "react-icons/ai";
 
 const menuItems = [
   { id: 1, label: "Home", icon: HouseCheck, link: "/admin/HomeAdmin" },
   { id: 2, label: "Users", icon: Postcard, link: "/admin/Users" },
   { id: 3, label: "Courses", icon: Book, link: "/admin/OurCourses" },
   { id: 4, label: "Events", icon: ClockHistory, link: "/admin/Events" },
-  { id: 5, label: "Packages", icon: PaintBucket, link: "/admin/Packages" },
+  { id: 5, label: "Payments", icon: Paypal, link: "/admin/Payments" },
+  { id: 6, label: "Packages", icon: PatchCheckFill, link: "/admin/Packages" },
 ];
 
 const Sidebar = () => {

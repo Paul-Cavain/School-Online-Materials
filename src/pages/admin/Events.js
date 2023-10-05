@@ -2,6 +2,7 @@ import { MenuButton, Messenger, Person } from "react-bootstrap-icons";
 import { AiFillBell } from "react-icons/ai";
 import Sidebar from "components/Sidebar";
 import Head from "next/head";
+import Event_Tabs from "components/Event_Tabs";
 
 const Events = () => {
     return(
@@ -13,6 +14,7 @@ const Events = () => {
 
             {/* admin navbar */}
             <div className="md:px-0 flex flex-row justify-start">
+                
                 <Sidebar />
 
                 <div className="flex-1 border-1 bg-gray-200">
@@ -45,9 +47,10 @@ const Events = () => {
                     </div>
                     
                     {/* bodycontents */}
-                    <div className="px-10">
+                    <div className="px-10 pt-10">
+
                         <div>
-                            <h3>Admin Events Page</h3>
+                            <Event_Tabs />
                         </div>
                     </div>
 

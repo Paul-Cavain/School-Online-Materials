@@ -36,7 +36,7 @@ const IndexAdmin = () => {
                             </div>
                             <Link href="./admin/HomeAdmin">
                                 <div className="pt-4">
-                                    <button type="submit" name="submit" className="w-20 bg-black text-white w-full h-10 rounded-md">Login</button>
+                                    <button type="submit" name="submit" className="bg-black text-white w-full h-10 rounded-md">Login</button>
                                 </div>
                             </Link>
                         </div>

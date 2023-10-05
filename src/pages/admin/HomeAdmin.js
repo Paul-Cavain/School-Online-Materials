@@ -30,7 +30,9 @@ const HomeAdmin = () => {
 
             {/* admin navbar */}
             <div className="md:px-0 flex flex-row justify-start">
-                <Sidebar />
+                <div>
+                    <Sidebar />
+                </div>
 
                 <div className="flex-1 border-1 bg-gray-200">
 

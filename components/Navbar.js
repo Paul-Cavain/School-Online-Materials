@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
-import { useState } from "react";
+    import { useState } from "react";
 
 const Navbar = () =>{
     const [menuOpen, stMenuOpen] = useState(false)
@@ -46,9 +46,15 @@ const Navbar = () =>{
                             <li className="ml-10 hover:border-b-4 text-lg">Contacts</li>
                         </Link>
 
+                        <Link href="/signup">
+                            <li className="ml-10 hover:border-b-4 text-lg">Register</li>
+                        </Link>
+
                         <Link href="/login">
                             <li className="ml-10 hover:border-b-4 text-lg">Login</li>
                         </Link>
+                        
+                       
                         
                         
                     </ul>
@@ -59,7 +65,6 @@ const Navbar = () =>{
             </div>
 
             {/* how it will loooks in a mobile  */}
-            
             <div className={
                 menuOpen
                 ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"

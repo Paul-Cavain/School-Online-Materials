@@ -1,6 +1,6 @@
 const Footer = () =>{
     return(
-        <div className="flex flex-col text-center py-16 md:py-32 bg-gray-300">
+        <div className="flex flex-col text-center py-16 md:py-20 bg-gray-300">
             <div className="flex flex-col md:flex-row justify-evenly">
                 <div>
                     <h3 className="text-xl text-bold mb-2">Satify</h3>
@@ -35,9 +35,6 @@ const Footer = () =>{
                     </ul>
                 </div>
 
-            </div>
-            <div className="text-center text-gray-500 text-md mt-20">
-                <h3>PaulCavain</h3>
             </div>
 
         </div>

@@ -62,7 +62,7 @@ const contact = ()=>{
                                 </div>
                             </div>
 
-                            <div className="space-x-4 flex flex-row mt-28">
+                            <div className="space-x-6 flex flex-row mt-20">
                                 <div>
                                     <Twitter className="text-indigo-600 text-lg hover:text-xl hover:text-black cursor-pointer" />
                                 </div>
@@ -104,29 +104,11 @@ const contact = ()=>{
                                 </div>
                             </div>
 
-                            <div className="mt-6 text-white">
-                                <h3>What does your question based?</h3>
-                            </div>
-                            <div className="flex flex-row md:space-x-8 mt-2 text-gray-700">
-                                <div>
-                                    <input type={"radio"} name="Physics" /><span className="ml-1">Physics</span>
-                                </div>
-                                <div>
-                                    <input type={"radio"} name="Biology" /><span className="ml-1">Biology</span>
-                                </div>
-                                <div>
-                                    <input type={"radio"} name="Chemistry" /><span className="ml-1">Chemistry</span>
-                                </div>
-                                <div>
-                                    <input type={"radio"} name="Other" /><span className="ml-1">Other</span>
-                                </div>
-                            </div>
-
                             <div className="flex flex-col mt-4">
                                 <label className="text-white">Message</label>
                                 <textarea name="message" placeholder="Write your message here!!" className="w-full h-20 rounded-md focus:outline-none px-2" />
                             </div>
-                            <div className="text-end mt-4">
+                            <div className="text-end pt-10">
                                 <button type="submit" name="submit" className="w-32 h-10 bg-black text-white rounded-md" onClick={() => alert("Message send successfull")}>Send Message</button>
                             </div>
 

@@ -109,15 +109,15 @@ const Tabs = () => {
 
           </ul>
           
-          <div className="relative flex flex-col bg-gray-100 w-full md:mb-4 mb-3 shadow-md rounded">
-            <div className="flex-auto md:px-4 md:py-5">
+          <div className="relative flex flex-col bg-gray-100 w-full md:mb-4 mb-3 rounded">
+            <div className="flex-auto md:px-4">
               <div className="tab-content tab-space">
 
                 {/* all courses */}
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="justify-center mt-16">
+                  <div className="justify-center mt-8">
 
-                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                    <div className="grid grid-cols-4 gap-3 py-2 pb-4 bg-gray-100 mx-16">
                       {Array.isArray(users) ? (
                         users.map((user, key) => (
                           <ul key={key} className="">
@@ -151,9 +151,9 @@ const Tabs = () => {
 
                 {/* physics cousses */}
                 <div className={openTab === 2 ? "block" : "hidden"} id="link1">
-                  <div className="justify-center mt-16">
+                  <div className="justify-center mt-8">
 
-                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                    <div className="grid grid-cols-4 gap-3 py-2 pb-4 bg-gray-100 mx-16">
                       {Array.isArray(users) ? (
                         users.map((user, key) => (
                           <ul key={key} className="">
@@ -187,9 +187,9 @@ const Tabs = () => {
 
                 {/* Chemistry courses */}
                 <div className={openTab === 3 ? "block" : "hidden"} id="link1">
-                  <div className="justify-center mt-16">
+                  <div className="justify-center mt-8">
 
-                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                    <div className="grid grid-cols-4 gap-3 py-2 pb-4 bg-gray-100 mx-16">
                       {Array.isArray(users) ? (
                         users.map((user, key) => (
                           <ul key={key} className="">
@@ -223,9 +223,9 @@ const Tabs = () => {
 
                 {/* Biology courses */}
                 <div className={openTab === 4 ? "block" : "hidden"} id="link1">
-                  <div className="justify-center mt-16">
+                  <div className="justify-center mt-8">
 
-                    <div className="grid grid-cols-4 space-x-2 space-y-4 py-2 pb-4 bg-gray-100 mx-16">
+                    <div className="grid grid-cols-4 gap-3 py-2 pb-4 bg-gray-100 mx-16">
                       {Array.isArray(users) ? (
                         users.map((user, key) => (
                           <ul key={key} className="">
